@@ -1,0 +1,88 @@
+/* General Page Styles */
+.homepage {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+  }
+  
+  .hero-section {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 100px 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-section p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .social-links a {
+    margin: 0 15px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #3498db;
+  }
+  
+  .about-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .skills-section {
+    padding: 60px 20px;
+  }
+  
+  .skills-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    margin: 20px;
+    padding: 20px;
+    background-color: #efefef;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .skill p {
+    font-size: 18px;
+  }
+  
+  .footer {
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: white;
+  }
+  
