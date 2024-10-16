@@ -1,0 +1,105 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Spread items across the navbar */
+    align-items: center;
+    background-color: #011627;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 2px solid #1E2D3D; /* Full-width bottom border for navbar */
+    height: 60px; /* Set a fixed height for the navbar */
+  }
+  
+  .navbar-logo a {
+    color: #607B96;  /* Default color for the logo */
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 20px;  /* Add some spacing between the logo and the links */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 0px; /* No gap, to ensure the borders appear seamlessly */
+    height: 100%;  /* Make links take up full navbar height */
+  }
+  
+  .navbar-links li {
+    position: relative;
+  }
+  
+  .navbar-links li a {
+    color: #607B96;  /* Default color for inactive tabs */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 16px;  /* Adjust padding for balanced height */
+    position: relative;
+    border-left: 1px solid #1E2D3D;  /* Left border on all links */
+    height: 100%;  /* Ensure the anchor element fills the navbar height */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    transition: all 0.3s ease;
+  }
+  
+  /* Add right border to the last regular link */
+  .navbar-links li:last-child a {
+    border-right: 1px solid #1E2D3D; /* Right border only for the last link */
+  }
+  
+  .navbar-links li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;  /* Position the border at the bottom of the link */
+    height: 2px;
+    background-color: #FEA55F;  /* The colored bottom border under active link */
+  }
+  
+  /* Active state for font color */
+  .navbar-links li a.active {
+    color: #FFFFFF; /* Active tab font color */
+  }
+  
+  /* Contact Me section on the right */
+  .navbar-contact {
+    margin-left: auto;  /* Push the contact link to the far right */
+    height: 100%;  /* Ensure full height for the contact link */
+    display: flex;
+    align-items: center;  /* Center text vertically */
+    position: relative;
+  }
+  
+  .navbar-contact a {
+    color: #607B96;  /* Default color for the contact link */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 16px;
+    border-left: 1px solid #1E2D3D;  /* Left border for the contact link */
+    height: 100%;  /* Full height to match the navbar */
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar-contact a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;  /* Position the border at the bottom of the contact link */
+    height: 2px;
+    background-color: #FEA55F;  /* The colored bottom border under the active Contact Me link */
+  }
+  
+  .navbar-contact a.active {
+    color: #FFFFFF;  /* Active tab font color for Contact Me */
+  }
+  
+  .navbar-contact a:hover {
+    background-color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  

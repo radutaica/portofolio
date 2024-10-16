@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+/* General IDE styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace; /* Apply Fira Code */
+  background-color: #1e1e1e;
+  color: #d4d4d4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Overall page structure */
+.homepage {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #010C15;
 }
 
-.App-link {
-  color: #61dafb;
+.main-body {
+  height: 90vh;
+  width: 90%;
+  background-color: #011627;
+  border: 1px solid #1E2D3D;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page-content {
+  flex-grow: 1; /* This will make the page content take up the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adjust padding inside the content area */
+}
+
+/* Navbar styling if needed */
+.navbar {
+  margin-bottom: 20px; /* Add some space between navbar and page content */
 }

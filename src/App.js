@@ -1,13 +1,20 @@
 import React from 'react';
-import './App.css';
-import HomePage from './screens/HomePage';
+import Navbar from './components/Navbar';
+import HomePage from './screens/HomePage'
+import './App.css';  // Global styles
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <HomePage />
+    <div className="homepage">
+      <div className="main-body">
+        <Navbar />
+        
+        <div className="page-content">
+          <HomePage />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
