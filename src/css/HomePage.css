@@ -7,6 +7,71 @@ body {
   color: #d4d4d4;
 }
 
+.outer-div {
+  display:flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+.left-up {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+.left-down {
+  display: flex;
+  flex-direction: column;
+}
+.left {
+  color: white;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+
+.carousel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+  margin: 20px 0;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-item img {
+  object-fit: contain; 
+  border-radius: 10px;
+  resize: contain;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 * {
   box-sizing: border-box;
 }

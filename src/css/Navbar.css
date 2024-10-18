@@ -1,20 +1,21 @@
 .navbar {
     display: flex;
-    justify-content: space-between; /* Spread items across the navbar */
+    justify-content: space-between;
     align-items: center;
     background-color: #011627;
     width: 100%;
     position: relative;
     z-index: 1000;
-    border-bottom: 2px solid #1E2D3D; /* Full-width bottom border for navbar */
-    height: 60px; /* Set a fixed height for the navbar */
+    border-bottom: 2px solid #1E2D3D;
+    height: 60px; 
   }
   
   .navbar-logo a {
     color: #607B96;  /* Default color for the logo */
     text-decoration: none;
     font-size: 18px;
-    padding-right: 20px;  /* Add some spacing between the logo and the links */
+    padding-right: 20px;
+    padding-left: 20px;  /* Add some spacing between the logo and the links */
   }
   
   .navbar-links {
@@ -32,7 +33,7 @@
     color: #607B96;  /* Default color for inactive tabs */
     text-decoration: none;
     font-size: 18px;
-    padding: 16px;  /* Adjust padding for balanced height */
+    padding: 25px;  /* Adjust padding for balanced height */
     position: relative;
     border-left: 1px solid #1E2D3D;  /* Left border on all links */
     height: 100%;  /* Ensure the anchor element fills the navbar height */
