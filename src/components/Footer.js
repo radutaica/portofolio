@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <div className="footer-bar-icon-right">
             <a href="https://github.com/radutaica" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '10px', color: '#607B96' }}>@radutaica</span>
+                <span style={{marginRight: '10px'}}>@radutaica</span>
                 <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
         </div>

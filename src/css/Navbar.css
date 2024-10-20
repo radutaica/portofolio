@@ -46,6 +46,13 @@
   .navbar-links li:last-child a {
     border-right: 1px solid #1E2D3D; /* Right border only for the last link */
   }
+
+  .navbar-links a:hover {
+    background-color: #333;
+    border-radius: 4px;
+    color: #43D9AD;
+    transition: background-color 0.3s ease;
+  }
   
   .navbar-links li a.active::after {
     content: "";
@@ -55,11 +62,6 @@
     bottom: 0;  /* Position the border at the bottom of the link */
     height: 2px;
     background-color: #FEA55F;  /* The colored bottom border under active link */
-  }
-  
-  /* Active state for font color */
-  .navbar-links li a.active {
-    color: #FFFFFF; /* Active tab font color */
   }
   
   /* Contact Me section on the right */
@@ -94,13 +96,33 @@
     background-color: #FEA55F;  /* The colored bottom border under the active Contact Me link */
   }
   
-  .navbar-contact a.active {
-    color: #FFFFFF;  /* Active tab font color for Contact Me */
-  }
-  
   .navbar-contact a:hover {
     background-color: #333;
     border-radius: 4px;
+    color: #43D9AD;
     transition: background-color 0.3s ease;
+  }
+  .blinking-caret {
+    font-family: monospace; /* Monospaced font for a coding look */
+    font-size: 24px;
+    color: #43D9AD;
+    text-decoration: none;
+    position: relative; /* Relative positioning for the caret */
+  }
+
+  /* Simulated caret using ::after pseudo-element */
+  .blinking-caret::after {
+    content: ''; /* No actual content, just the caret */
+    position: absolute;
+    right: 10px; /* Positioning the caret slightly to the right of the text */
+    width: 4px; /* Width of the caret (blinking line) */
+    height: 100%;
+    background-color: #43D9AD; /* Same color as your text */
+    animation: blink-animation 1s steps(1) infinite;
+  }
+  @keyframes blink-animation {
+    50% {
+      opacity: 0;
+    }
   }
   

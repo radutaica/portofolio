@@ -63,13 +63,13 @@
 }
 
 .footer-bar-icon a:hover {
-    color: #ffffff;
+    color: #43D9AD;
 }
 .footer-bar-icon-right a {
     color: #607B96;
     text-decoration: none;
 }
 
-.footer-bar-icon-right a:hover {
-    color: #ffffff;
+.footer-bar-icon-right :hover {
+    color: #43D9AD;
 }
