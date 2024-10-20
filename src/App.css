@@ -28,7 +28,7 @@ body {
   background-color: #011627;
   border: 1px solid #1E2D3D;
   border-radius: 8px;
-  padding: 20px;
+  padding: 0px 0px;
   margin: 10px 0;
   display: flex;
   flex-direction: column;
@@ -38,8 +38,6 @@ body {
 .page-content {
   flex-grow: 1; /* This will make the page content take up the remaining space */
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px; /* Adjust padding inside the content area */
 }
 

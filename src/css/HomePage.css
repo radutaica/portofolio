@@ -1,10 +1,118 @@
-/* General IDE styles */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Fira Code', 'Consolas', 'Courier New', monospace; /* Apply Fira Code */
   background-color: #1e1e1e;
   color: #d4d4d4;
+}
+
+.outer-div {
+  display:flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.left-up {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.left-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  color: white;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+
+/* Carousel container */
+.carousel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+/* General styles for carousel items */
+.carousel-item {
+  margin: 20px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8); /* Scale down non-active items */
+  opacity: 0.2; /* Less opacity for non-active items */
+  transition: transform 0.5s, opacity 0.5s;
+  height: 200px;
+  width: 500px;
+}
+
+/* Active item in the center */
+.carousel-item.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Full scale for active */
+  z-index: 2;
+}
+
+/* Previous item - slightly below */
+.carousel-item.prev {
+  opacity: 0.3;
+  transform: translate(-50%, calc(-50% + 200px)) scale(1.0);
+  z-index: 1;
+}
+
+/* Next item - slightly above */
+.carousel-item.next {
+  opacity: 0.3;
+  transform: translate(-50%, calc(-50% - 200px)) scale(1.0);
+  z-index: 1;
+}
+
+.carousel-item img {
+  width: 90%;
+  margin-left: 30px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 0px;
+  background-color: #4D5BCE;
+  animation: blink 1s step-end infinite;
 }
 
 * {
