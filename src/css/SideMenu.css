@@ -1,0 +1,21 @@
+.sidebar {
+    width: 200px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .folder ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+  
+  .folder ul li {
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  
+  .folder ul li:hover {
+    text-decoration: underline;
+  }
+  

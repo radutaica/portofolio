@@ -38,8 +38,6 @@ body {
 .page-content {
   flex-grow: 1; /* This will make the page content take up the remaining space */
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px; /* Adjust padding inside the content area */
 }
 
