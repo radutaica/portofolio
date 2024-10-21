@@ -4,7 +4,9 @@ import '../css/SideMenu.css'
 const SideMenu = ({ openTab }) => {
   return (
     <div className="sidebar">
-      <h3>About Me</h3>
+        <div>
+            <span>personal-info</span>
+        </div>
       <div className="folder">
         <p>Education</p>
         <ul>

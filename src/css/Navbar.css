@@ -13,8 +13,7 @@
   .navbar-logo a {
     color: #607B96;  /* Default color for the logo */
     text-decoration: none;
-    font-size: 18px;
-    padding-right: 20px;
+    font-size: 16px;
     padding-left: 20px;  /* Add some spacing between the logo and the links */
   }
   
@@ -32,7 +31,7 @@
   .navbar-links li a {
     color: #607B96;  /* Default color for inactive tabs */
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     padding: 25px;  /* Adjust padding for balanced height */
     position: relative;
     border-left: 1px solid #1E2D3D;  /* Left border on all links */

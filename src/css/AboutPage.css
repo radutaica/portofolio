@@ -1,7 +1,22 @@
 .about-page-layout {
     display: flex;
-    height: 100vh;
+    width: 100%;
+    margin-top: -35px;
   }
+
+.side-menu {
+  flex: 1;
+  display: flex;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.header {
+  width: 100%;
+}
   
   .main-content {
     flex-grow: 1;

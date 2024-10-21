@@ -1,31 +1,47 @@
 .header-tabs {
     display: flex;
-    background-color: #e3e3e3;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    width: 100%;
+    border-bottom: 1px solid #607B96; 
+    padding-bottom: 5px;
+    height: 40px
   }
   
   .tab {
-    margin-right: 10px;
-    padding: 5px 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    margin-right: 0; /* Remove margin between tabs */
+    padding: 5px 20px;
+    background-color: transparent;
     cursor: pointer;
+    border-left: 1px solid #607B96;  /* Add left border to all tabs */
+    height: 100%;
   }
   
   .tab.active {
-    background-color: #d1d1d1;
-    border-bottom: none;
+    background-color: red;
+    border-bottom: none; /* Remove bottom border for active tab */
   }
   
   .tab button {
     background-color: transparent;
+    color: #607B96;
     border: none;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 10px;
+    font-size: 20px;
   }
   
   .tab button:hover {
-    color: red;
+    color: #43D9AD;
+  }
+  
+  /* Ensure the first tab has no left border */
+  .tab:first-child {
+    border-left: none;
+  }
+  
+  /* Ensure the last tab has a right border */
+  .tab:last-child {
+    border-right: 1px solid#607B96; 
+    height: 100%;
   }
   
