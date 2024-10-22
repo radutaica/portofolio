@@ -1,8 +1,8 @@
 .sidebar {
-  width: 185px;
+  width: 205px;
   background-color: transparent;
   padding: 10px;
-  border-right: 1px solid #607B96; /* Ensure the border has a style */
+  border-right: 1px solid #1E2D3D; /* Ensure the border has a style */
   min-height: 100%;               /* Full height of the viewport */
 }
   

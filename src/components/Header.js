@@ -1,21 +1,25 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import '../css/Header.css'
+import '../css/Header.css';
 
-const Header = ({ openedTabs, closeTab }) => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
+const Header = ({ openedTabs, closeTab, openTab }) => {
   return (
     <div className="header-tabs">
+      <div className='tab' style={{ paddingRight: '59px', paddingTop: '7px' }}>
+        <span>personal-info</span>
+      </div>
       {openedTabs.map((tab, index) => (
         <div
           key={index}
-          className={`tab ${location.pathname === tab.path ? 'active' : ''}`}
-          onClick={() => navigate(tab.path)}
+          className={`tab`}
+          onClick={() => openTab(tab.path, tab.name)} // Set the tab as active
         >
           <span>{tab.name}</span>
-          <button onClick={() => closeTab(tab.path)}>x</button>
+          <button onClick={(e) => {
+            e.stopPropagation();
+            closeTab(tab.path);
+          }}>
+            x
+          </button>
         </div>
       ))}
     </div>

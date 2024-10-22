@@ -106,14 +106,14 @@
     font-size: 24px;
     color: #43D9AD;
     text-decoration: none;
-    position: relative; /* Relative positioning for the caret */
+    position: relative; 
   }
 
   /* Simulated caret using ::after pseudo-element */
   .blinking-caret::after {
     content: ''; /* No actual content, just the caret */
     position: absolute;
-    right: 10px; /* Positioning the caret slightly to the right of the text */
+    right: -7px; /* Positioning the caret slightly to the right of the text */
     width: 4px; /* Width of the caret (blinking line) */
     height: 100%;
     background-color: #43D9AD; /* Same color as your text */

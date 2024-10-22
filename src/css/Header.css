@@ -2,8 +2,7 @@
     display: flex;
     background-color: transparent;
     width: 100%;
-    border-bottom: 1px solid #607B96; 
-    padding-bottom: 5px;
+    border-bottom: 1px solid #1E2D3D;; 
     height: 40px
   }
   
@@ -12,13 +11,18 @@
     padding: 5px 20px;
     background-color: transparent;
     cursor: pointer;
-    border-left: 1px solid #607B96;  /* Add left border to all tabs */
+    border-left: 1px solid #1E2D3D;;  /* Add left border to all tabs */
     height: 100%;
   }
   
   .tab.active {
-    background-color: red;
-    border-bottom: none; /* Remove bottom border for active tab */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;  /* Position the border at the bottom of the link */
+    height: 2px;
+    background-color: #FEA55F;  /* The colored bottom border under active link */
   }
   
   .tab button {
@@ -41,7 +45,7 @@
   
   /* Ensure the last tab has a right border */
   .tab:last-child {
-    border-right: 1px solid#607B96; 
+    border-right: 1px solid#1E2D3D;; 
     height: 100%;
   }
   

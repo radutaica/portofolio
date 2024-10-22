@@ -38,10 +38,4 @@ body {
 .page-content {
   flex-grow: 1; /* This will make the page content take up the remaining space */
   display: flex;
-  padding: 20px; /* Adjust padding inside the content area */
-}
-
-/* Navbar styling if needed */
-.navbar {
-  margin-bottom: 20px; /* Add some space between navbar and page content */
 }
