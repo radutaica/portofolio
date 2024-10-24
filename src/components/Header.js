@@ -13,6 +13,7 @@ const Header = ({ openedTabs, closeTab, openTab, activeTab }) => {
         <div
           key={index}
           className={`tab ${tab['path'] === activeTab ? "active" : ""}`}
+          style = {{color: '#607B96'}}
           onClick={() => openTab(tab.path, tab.name)} // Set the tab as active
         >
           <span>{tab.name}</span>
