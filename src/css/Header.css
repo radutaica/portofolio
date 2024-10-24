@@ -15,14 +15,20 @@
     height: 100%;
   }
   
+  .tab-label::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white; /* Color of the arrow */
+    margin-right: 8px; /* Space between arrow and text */
+    transform: translateY(-2px); /* Adjust the vertical position if needed */
+  }
+  
   .tab.active {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;  /* Position the border at the bottom of the link */
-    height: 2px;
-    background-color: #FEA55F;  /* The colored bottom border under active link */
+    border-bottom: 1px solid #FEA55F;  /* Adds a colored bottom border for the active tab */
   }
   
   .tab button {

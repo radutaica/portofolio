@@ -59,7 +59,7 @@
     left: 0;
     right: 0;
     bottom: 0;  /* Position the border at the bottom of the link */
-    height: 2px;
+    height: 3px;
     background-color: #FEA55F;  /* The colored bottom border under active link */
   }
   

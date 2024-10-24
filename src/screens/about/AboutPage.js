@@ -23,25 +23,21 @@ const AboutPage = () => {
   const closeTab = (tabPath) => {
     const updatedTabs = openedTabs.filter(tab => tab.path !== tabPath);
     setOpenedTabs(updatedTabs);
-
-    // If the closed tab was the active one, set a new active tab
-    if (activeTab === tabPath) {
-      if (updatedTabs.length > 0) {
-        setActiveTab(updatedTabs[0].path); // Set the first remaining tab as active
-      } else {
-        setActiveTab(null); // If no tabs remain, clear the active tab
-      }
+    if (updatedTabs.length > 0) {
+      setActiveTab(updatedTabs[0]['path'])
+    } else {
+      setActiveTab(null);
     }
   };
 
   return (
     <div className="about-page-layout">
       <div className="header">
-        <Header openedTabs={openedTabs} closeTab={closeTab} openTab={openTab} />
+        <Header openedTabs={openedTabs} closeTab={closeTab} openTab={openTab} activeTab = {activeTab} />
       </div>
       <div className="row">
         <div className="side-menu">
-          <SideMenu openTab={openTab} />
+          <SideMenu openTab={openTab} activeTab={activeTab} />
         </div>
         <div className="main-content">
           <ContentArea activeTab={activeTab} />

@@ -2,21 +2,29 @@
   width: 205px;
   background-color: transparent;
   padding: 10px;
-  border-right: 1px solid #1E2D3D; /* Ensure the border has a style */
-  min-height: 100%;               /* Full height of the viewport */
+  border-right: 1px solid #1E2D3D;
+  min-height: 100%;
 }
-  
-  .folder ul {
-    list-style-type: none;
-    padding-left: -0px;
-  }
-  
-  .folder ul li {
-    cursor: pointer;
-    margin: 5px 0;
-  }
-  
-  .folder ul li:hover {
-    text-decoration: underline;
-  }
-  
+
+.folder p {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.folder ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.folder ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.arrow-icon, .folder-icon, .file-icon {
+  margin-right: 8px;
+}
