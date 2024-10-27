@@ -18,7 +18,6 @@
 }
 
 .side-menu {
-  flex: 0 0 250px; /* Set a fixed width for the side menu, adjust as needed */
   display: flex;
 }
 

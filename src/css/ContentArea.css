@@ -1,6 +1,37 @@
 .content-area {
-    padding: 20px;
-    height: 100%;
-    overflow-y: auto;
-  }
-  
+  padding: 0px 0px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 50%;
+  color: #607B96;
+}
+
+.code-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-line {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.code-line.selected {
+  background-color: #555;
+}
+
+.line-number {
+  width: 20px;
+  text-align: left;
+  margin-right: 10px;
+  color: #607B96;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.code-text {
+  white-space: pre;
+}
