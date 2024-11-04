@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import SideMenu from '../../components/SideMenu';
 import ContentArea from '../../components/ContentArea';
 import '../../css/AboutPage.css'; // CSS for layout
+import AboutTerminal from '../../components/Terminal';
 
 const AboutPage = () => {
   const [openedTabs, setOpenedTabs] = useState([]);
@@ -41,6 +42,9 @@ const AboutPage = () => {
         </div>
         <div className="main-content">
           <ContentArea activeTab={activeTab} />
+        </div>
+        <div>
+        <AboutTerminal/>
         </div>
       </div>
     </div>
