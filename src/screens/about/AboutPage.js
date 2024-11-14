@@ -43,7 +43,7 @@ const AboutPage = () => {
         <div className="main-content">
           <ContentArea activeTab={activeTab} />
         </div>
-        <div>
+        <div style = {{width: '100%'}}>
         <AboutTerminal/>
         </div>
       </div>
