@@ -65,21 +65,27 @@ useEffect(() => {
     <div className='outer-div'>
       <div className='left'>
         <div className='left-up'>
-          <p style={{ fontSize: '18px', color: '#E5E9F0', marginBottom: 50, lineHeight: '0'}}>Hi all. I am</p>
-          <p style={{ fontSize: '64px', color: '#E5E9F0', marginBottom: 20, lineHeight: '0'}}>Radu Taica</p>
-          {/* Typing effect for title */}
-          <p style={{ fontSize: '40px', color: '#4D5BCE', lineHeight: '2' }}> {displayedText}<span className="cursor">|</span></p>
+          <p className="text-[18px] text-[#E5E9F0] mb-[50px] leading-[0px]">Hi all. I am</p>
+          <p className="text-[64px] text-[#E5E9F0] mb-0 leading-[64px]">Radu Taica</p>
+          <p className="text-[40px] text-[#4D5BCE] leading-[2]">
+            {displayedText}<span className="cursor">|</span>
+          </p>
         </div>
 
         <div className='left-down'>
-          <p style={{ fontSize: '18px', color: '#607B96', lineHeight: '0' }}>// feel free to scroll through my projects</p>
-          <p style={{ fontSize: '18px', color: '#607B96', lineHeight: '0' }}>// you can also see them on my Github page</p>
+          <p className="text-[18px] text-[#607B96] leading-[0px] mb-[20px]">// feel free to scroll through my projects</p>
+          <p className="text-[18px] text-[#607B96] leading-[0px] mb-[20px]">// you can also see them on my Github page</p>
           <div>
-            <span style={{ color: '#4D5BCE' }}>const </span>
-            <span style={{ color: '#43D9AD' }}>githubLink </span>
-            <span style={{ color: 'white' }}>= </span>
-            <a href="https://github.com/radutaica" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textDecorationColor: '#E99287' }}>
-              <span style={{ color: '#E99287' }}>https://github.com/radutaica</span>
+            <span className="text-[#4D5BCE]">const </span>
+            <span className="text-[#43D9AD]">githubLink </span>
+            <span className="text-white">= </span>
+            <a 
+              href="https://github.com/radutaica" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="underline decoration-[#E99287]"
+            >
+              <span className="text-[#E99287]">https://github.com/radutaica</span>
             </a>
           </div>
         </div>

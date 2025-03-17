@@ -14,7 +14,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/" className="blinking-caret">`$ ./radu-taica</Link>
+        <div>
+          <Link to="/" className="text-[#607B96] no-underline text-base mr-[29.5px] blinking-caret">`$ ./radu-taica</Link>
+        </div>
       </div>
       <ul className="navbar-links">
         <li>

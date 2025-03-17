@@ -115,6 +115,7 @@ const styles = {
     height: '100%',
     width: '100%',
     overflowY: 'auto',
+    maxHeight: '100%',
   },
   promptLabel: {
     color: '#00ff00', // Green prompt label like a traditional terminal

@@ -43,8 +43,8 @@ const AboutPage = () => {
         <div className="main-content">
           <ContentArea activeTab={activeTab} />
         </div>
-        <div className ='overflow-y-auto'>
-        <AboutTerminal/>
+        <div className="h-[75vh] overflow-hidden">
+          <AboutTerminal/>
         </div>
       </div>
     </div>
