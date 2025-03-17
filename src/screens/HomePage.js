@@ -65,10 +65,10 @@ useEffect(() => {
     <div className='outer-div'>
       <div className='left'>
         <div className='left-up'>
-          <p style={{ fontSize: '18px', color: '#E5E9F0', marginBottom: 0, lineHeight: '0'}}>Hi all. I am</p>
-          <p style={{ fontSize: '64px', color: '#E5E9F0', marginBottom: 0, lineHeight: '0'}}>Radu Taica</p>
+          <p style={{ fontSize: '18px', color: '#E5E9F0', marginBottom: 50, lineHeight: '0'}}>Hi all. I am</p>
+          <p style={{ fontSize: '64px', color: '#E5E9F0', marginBottom: 20, lineHeight: '0'}}>Radu Taica</p>
           {/* Typing effect for title */}
-          <p style={{ fontSize: '40px', color: '#4D5BCE', lineHeight: '2' }}>> {displayedText}<span className="cursor">|</span></p>
+          <p style={{ fontSize: '40px', color: '#4D5BCE', lineHeight: '2' }}> {displayedText}<span className="cursor">|</span></p>
         </div>
 
         <div className='left-down'>

@@ -43,7 +43,7 @@ const AboutPage = () => {
         <div className="main-content">
           <ContentArea activeTab={activeTab} />
         </div>
-        <div style = {{width: '100%'}}>
+        <div className ='overflow-y-auto'>
         <AboutTerminal/>
         </div>
       </div>
