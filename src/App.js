@@ -1,27 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import React Router components
 import Navbar from './components/Navbar';
 import HomePage from './screens/HomePage';
 import AboutPage from './screens/about/AboutPage'; // Example of another page
+import ProjectsPage from './screens/projects/ProjectsPage';
 import ContactPage from './screens/ContactPage'; // Another example
 import Footer from './components/Footer';
 import './App.css';  // Global styles
 
 const App = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <Router>
       <div className="homepage">
         <div className="main-body">
-          <Navbar />  {/* Always present */}
+          {/* Show desktop navbar on larger screens */}
+          <div className="hidden md:block">
+            <Navbar />  {/* Always present */}
+          </div>
+          
+          {/* Show mobile header on small screens */}
+          <div className="md:hidden">
+            <div className="mobile-header">
+              <span className="text-[#607B96]">radu-taica</span>
+              <button onClick={() => setIsMobileMenuOpen(true)} className="menu-btn">☰</button>
+            </div>
+          </div>
+
+          {/* Mobile menu */}
+          <div className={`mobile-menu md:hidden ${isMobileMenuOpen ? 'open' : ''}`}>
+            <div className="mobile-menu-header">
+              <span className="text-[#607B96]">radu-taica</span>
+              <button onClick={() => setIsMobileMenuOpen(false)} className="close-btn">×</button>
+            </div>
+            <div className="mobile-menu-content">
+              <h2 className="text-[#607B96] mb-4"># navigate:</h2>
+              <nav className="mobile-nav">
+                <a href="/" className="nav-item">_hello</a>
+                <a href="/about" className="nav-item">_about-me</a>
+                <a href="/projects" className="nav-item">_projects</a>
+                <a href="/contact" className="nav-item">_contact-me</a>
+              </nav>
+            </div>
+          </div>
+
           <div className="page-content">
             <Routes>
               {/* Define routes for different pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </div>
-          <Footer />  {/* Always present */}
+          
+          <Footer className="hidden md:block" />
         </div>
       </div>
     </Router>

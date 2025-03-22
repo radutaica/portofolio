@@ -7,69 +7,91 @@
     position: relative;
     z-index: 1000;
     border-top: 2px solid #1E2D3D;
-    height: 60px; 
-    padding: 0 20px; /* Add padding to create some space on both sides */
-}
-
-.footer-bar-left {
-    display: flex;
-    height: '100%';
-    align-items: center;
-    color: #607B96;
-    text-decoration: none;
-    font-size: 18px;
-    padding-right: 20px;
-    border-right: 1px solid #1E2D3D;
+    min-height: 50px;
+    height: auto;
+    padding: 8px 12px;
 }
 
 .footer-bar-left-outer {
     display: flex;
-    height: '100%';
+    height: 100%;
     align-items: center;
     color: #607B96;
     text-decoration: none;
     border-right: 1px solid #1E2D3D;
 }
 
-.footer-bar-icon-left {
-    padding-right: 20px;
-    padding-left: 20px;
-    border-left: 1px solid #1E2D3D;
-    height: 100%;
+.footer-bar-left {
     display: flex;
-    align-items: center;
-}
-.footer-bar-icon-right {
-    padding-right: 20px;
-    padding-left: 20px;
-    border-left: 1px solid #1E2D3D;
     height: 100%;
-    display: flex;
     align-items: center;
+    color: #607B96;
+    text-decoration: none;
+    padding-right: 12px;
+    border-right: none;
 }
 
 .footer-bar-icon {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 0 12px;
     height: 100%;
     display: flex;
     align-items: center;
-    
 }
 
-.footer-bar-icon a {
+.footer-bar-icon-right {
+    padding-left: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: #607B96;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-.footer-bar-icon a:hover {
+.icon-link:hover {
     color: #43D9AD;
-}
-.footer-bar-icon-right a {
-    color: #607B96;
-    text-decoration: none;
 }
 
-.footer-bar-icon-right :hover {
-    color: #43D9AD;
+.github-text {
+    margin-right: 8px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .footer-bar {
+        padding: 6px 10px;
+    }
+
+    .footer-bar-left {
+        padding-right: 8px;
+    }
+
+    .footer-bar-icon {
+        padding: 0 8px;
+    }
+
+    .footer-bar-icon-right {
+        padding-left: 8px;
+    }
+
+    .github-text {
+        margin-right: 6px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .footer-bar {
+        padding: 4px 8px;
+    }
+
+    .footer-bar-left-outer {
+        border-right: none;
+    }
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/HomePage.css';
 import codeChunk from '../assets/images/code-chunk.png';  // Correct import
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const images = [
   codeChunk,
@@ -65,33 +67,35 @@ useEffect(() => {
     <div className='outer-div'>
       <div className='left'>
         <div className='left-up'>
-          <p className="text-[18px] text-[#E5E9F0] mb-[50px] leading-[0px]">Hi all. I am</p>
-          <p className="text-[64px] text-[#E5E9F0] mb-0 leading-[64px]">Radu Taica</p>
-          <p className="text-[40px] text-[#4D5BCE] leading-[2]">
+          <p className="text-[16px] sm:text-[18px] text-[#E5E9F0] mb-[20px] md:mb-[50px] leading-[0px]">Hi all. I am</p>
+          <p className="text-[32px] sm:text-[40px] md:text-[64px] text-[#E5E9F0] mb-[20px] md:mb-0 leading-[1.2] md:leading-[64px]">Radu Taica</p>
+          <p className="text-[24px] sm:text-[28px] md:text-[40px] text-[#4D5BCE] leading-[1.2] md:leading-[2]">
             {displayedText}<span className="cursor">|</span>
           </p>
         </div>
 
-        <div className='left-down'>
-          <p className="text-[18px] text-[#607B96] leading-[0px] mb-[20px]">// feel free to scroll through my projects</p>
-          <p className="text-[18px] text-[#607B96] leading-[0px] mb-[20px]">// you can also see them on my Github page</p>
-          <div>
-            <span className="text-[#4D5BCE]">const </span>
-            <span className="text-[#43D9AD]">githubLink </span>
-            <span className="text-white">= </span>
+        <div className='left-down mt-[30px] md:mt-[60px] flex flex-col items-center md:items-start'>
+          <div className="text-center md:text-left mb-[20px] md:mb-[30px]">
+            <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#607B96] leading-[1.5] md:leading-[0px] mb-[8px]">// feel free to scroll through my projects</p>
+            <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#607B96] leading-[1.5] md:leading-[0px]">// you can also see them on my Github page</p>
+          </div>
+          <div className="text-center md:text-left">
+            <span className="text-[14px] sm:text-[16px] md:text-[18px] text-[#4D5BCE]">const </span>
+            <span className="text-[14px] sm:text-[16px] md:text-[18px] text-[#43D9AD]">githubLink </span>
+            <span className="text-[14px] sm:text-[16px] md:text-[18px] text-white">= </span>
             <a 
               href="https://github.com/radutaica" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="underline decoration-[#E99287]"
+              className="underline decoration-[#E99287] break-all md:break-normal"
             >
-              <span className="text-[#E99287]">https://github.com/radutaica</span>
+              <span className="text-[14px] sm:text-[16px] md:text-[18px] text-[#E99287]">https://github.com/radutaica</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div className='right'>
+      <div className='right md:block hidden'>
         <div className="carousel">
           {images.map((image, index) => (
             <div key={index} className={getClassName(index)}>
