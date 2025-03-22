@@ -3,7 +3,7 @@ import { FaReact } from 'react-icons/fa';
 
 const ProjectCard = ({ title, subtitle, description, image, techIcon }) => {
   return (
-    <div className="bg-[#011221] rounded-lg overflow-hidden mb-4 border border-[#1E2D3D] max-w-[350px]">
+    <div className="bg-[#011221] rounded-lg overflow-hidden mb-4 border border-[#1E2D3D] max-w-[450px]">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-40 object-cover" />
         <div className="absolute top-2 right-2 bg-[#011221] p-1.5 rounded-full">

@@ -76,8 +76,8 @@ useEffect(() => {
 
         <div className='left-down mt-[30px] md:mt-[60px] flex flex-col items-center md:items-start'>
           <div className="text-center md:text-left mb-[20px] md:mb-[30px]">
-            <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#607B96] leading-[1.5] md:leading-[0px] mb-[8px]">// feel free to scroll through my projects</p>
-            <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#607B96] leading-[1.5] md:leading-[0px]">// you can also see them on my Github page</p>
+            <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#607B96] leading-[1.5] md:leading-[1.6]">// feel free to scroll through my projects</p>
+            <p className="text-[14px] sm:text-[16px] md:text-[18px] text-[#607B96] leading-[1.5] md:leading-[1.6]">// you can also see them on my Github page</p>
           </div>
           <div className="text-center md:text-left">
             <span className="text-[14px] sm:text-[16px] md:text-[18px] text-[#4D5BCE]">const </span>

@@ -35,23 +35,51 @@ const ProjectsPage = () => {
       title: 'Project 1',
       subtitle: '_ui-animations',
       description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/path-to-your-image1.jpg',
+      image: '/images/project_image.jpg',
       tech: 'React'
     },
     {
       title: 'Project 2',
       subtitle: '_tetris-game',
       description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/path-to-your-image2.jpg',
+      image: '/images/project_image.jpg',
       tech: 'React'
     },
     {
       title: 'Project 3',
       subtitle: '_portofolio',
       description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/path-to-your-image2.jpg',
+      image: '/images/project_image.jpg',
       tech: 'React'
     },
+    {
+      title: 'Project 4',
+      subtitle: '_portofolio',
+      description: 'Duis aute irure dolor in velit esse cillum dolore.',
+      image: '/images/project_image.jpg',
+      tech: 'React'
+    },
+    {
+      title: 'Project 5',
+      subtitle: '_portofolio',
+      description: 'Duis aute irure dolor in velit esse cillum dolore.',
+      image: '/images/project_image.jpg',
+      tech: 'React'
+    },
+    {
+      title: 'Project 6',
+      subtitle: '_portofolio',
+      description: 'Duis aute irure dolor in velit esse cillum dolore.',
+      image: '/images/project_image.jpg',
+      tech: 'React'
+    },
+    {
+      title: 'Project 7',
+      subtitle: '_portofolio',
+      description: 'Duis aute irure dolor in velit esse cillum dolore.',
+      image: '/images/project_image.jpg',
+      tech: 'React'
+    }
   ];
 
   return (
