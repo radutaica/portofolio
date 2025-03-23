@@ -1,8 +1,6 @@
 .sidebar {
-  width: 205px;
   background-color: transparent;
-  padding: 10px;
-  border-right: 1px solid #1E2D3D;
+  padding: 0;
   min-height: 100%;
 }
 
@@ -11,11 +9,13 @@
   align-items: center;
   cursor: pointer;
   margin: 5px 0;
+  padding: 0 10px;
 }
 
 .folder ul {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 30px;
+  padding-right: 10px;
 }
 
 .folder ul li {
