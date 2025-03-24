@@ -14,7 +14,7 @@ const AboutPage = () => {
   // Add a new tab when clicked from SideMenu or Header
   const openTab = (tabPath, tabName) => {
     // Check if the tab is already opened
-    if (!openedTabs.some(tab => tab.path === tabPath)) {
+    if (!openedTabs.some(tab => tab.path === tabPath) && tabPath !== null) {
       const newOpenedTabs = [...openedTabs, { path: tabPath, name: tabName }];
       setOpenedTabs(newOpenedTabs);
     }
@@ -40,6 +40,7 @@ const AboutPage = () => {
 
   return (
     <div className="flex flex-col h-screen bg-[#011627] text-[#607B96]">
+      {/* Header */}
       <div className="flex items-center border-b border-[#1E2D3D] h-[45px] px-4 md:px-0">
         <button 
           className="md:hidden text-[#607B96] hover:text-white mr-4"
@@ -54,7 +55,9 @@ const AboutPage = () => {
           activeTab={activeTab}
         />
       </div>
-      <div className="flex flex-1">
+
+      {/* Main container */}
+      <div className="flex flex-1 relative">
         {/* Mobile menu overlay */}
         {isMobileMenuOpen && (
           <div 
@@ -66,7 +69,7 @@ const AboutPage = () => {
         {/* Sidebar */}
         <div 
           className={`
-            fixed md:relative w-[250px] h-[calc(100vh-45px)] bg-[#011627] border-r border-[#1E2D3D] 
+            fixed md:relative w-[80vw] md:w-[205px] h-[calc(100vh-45px)] bg-[#011627] border-r border-[#1E2D3D] 
             transform transition-transform duration-300 z-50
             ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
             md:translate-x-0 overflow-y-auto
@@ -75,13 +78,21 @@ const AboutPage = () => {
           <SideMenu openTab={openTab} activeTab={activeTab} />
         </div>
 
-        {/* Main content area */}
-        <div className="flex flex-1">
-          <div className="w-full md:w-[55%]">
+        {/* Content container */}
+        <div className="flex-1 h-[calc(100vh-45px)] overflow-hidden">
+          {/* Mobile content */}
+          <div className="md:hidden w-full h-full overflow-y-auto">
             <ContentArea activeTab={activeTab} />
           </div>
-          <div className="hidden md:block w-[45%] border-l border-[#1E2D3D] h-[74.5vh]">
-            <AboutTerminal />
+
+          {/* Desktop content */}
+          <div className="hidden md:flex flex-1">
+            <div className="w-[55%] h-[74vh]">
+              <ContentArea activeTab={activeTab} />
+            </div>
+            <div className="w-[45%] border-l border-[#1E2D3D] h-[74vh]">
+              <AboutTerminal />
+            </div>
           </div>
         </div>
       </div>

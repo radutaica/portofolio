@@ -1,47 +1,46 @@
 .header-tabs {
     display: flex;
-    background-color: transparent;
-    width: 100%;
-    border-bottom: 1px solid #1E2D3D;; 
-    height: 40px
-  }
-  
-  .tab {
-    margin-right: 0; /* Remove margin between tabs */
-    padding: 5px 20px;
-    background-color: transparent;
-    cursor: pointer;
-    border-left: 1px solid #1E2D3D;;  /* Add left border to all tabs */
     height: 100%;
   }
   
+  .tab {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30.75px;
+    border-right: 1px solid #1E2D3D;
+    cursor: pointer;
+  }
+  
+  .tab-label {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
   .tab-label::before {
     content: '';
     display: inline-block;
     width: 0;
     height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid white; /* Color of the arrow */
-    margin-right: 8px; /* Space between arrow and text */
-    transform: translateY(-2px); /* Adjust the vertical position if needed */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    margin-right: 8px;
   }
   
   .tab.active {
-    border-bottom: 1px solid #FEA55F;  /* Adds a colored bottom border for the active tab */
+    color: white;
+    border-bottom: 2px solid #FEA55F;
   }
   
   .tab button {
-    background-color: transparent;
-    color: #607B96;
-    border: none;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 20px;
+    margin-left: 8px;
   }
   
   .tab button:hover {
-    color: #43D9AD;
+    color: white;
   }
   
   /* Ensure the first tab has no left border */
@@ -51,7 +50,7 @@
   
   /* Ensure the last tab has a right border */
   .tab:last-child {
-    border-right: 1px solid#1E2D3D;; 
+    border-right: 1px solid #1E2D3D;
     height: 100%;
   }
   

@@ -6,7 +6,6 @@ import { faFolder, faFile, faChevronRight, faChevronDown } from '@fortawesome/fr
 const SideMenu = ({ openTab, activeTab }) => {
   const [isEducationOpen, setEducationOpen] = useState(false);
   const [isWorkOpen, setWorkOpen] = useState(false);
-  console.log(activeTab)
 
   const toggleEducation = () => setEducationOpen(!isEducationOpen);
   const toggleWork = () => setWorkOpen(!isWorkOpen);

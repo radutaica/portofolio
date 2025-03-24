@@ -8,14 +8,16 @@
 .code-block {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .code-line {
   display: flex;
-  align-items: center;
-  padding: 4px 8px;
+  align-items: flex-start;
+  padding: 4px 0;
   cursor: pointer;
   transition: background-color 0.2s;
+  width: 100%;
 }
 
 .code-line.selected {
@@ -25,12 +27,21 @@
 .line-number {
   width: 20px;
   text-align: left;
-  margin-right: 10px;
+  margin-right: 16px;
   color: #607B96;
   font-size: 18px;
   font-weight: 500;
+  flex-shrink: 0;
 }
 
 .code-text {
-  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-word;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .code-line {
+    padding: 4px 0;
+  }
 }
