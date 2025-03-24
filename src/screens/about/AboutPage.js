@@ -69,28 +69,27 @@ const AboutPage = () => {
         {/* Sidebar */}
         <div 
           className={`
-            fixed md:relative w-[80vw] md:w-[205px] h-[calc(100vh-45px)] bg-[#011627] border-r border-[#1E2D3D] 
-            transform transition-transform duration-300 z-50
-            ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
-            md:translate-x-0 overflow-y-auto
+            ${isMobileMenuOpen ? 'block' : 'hidden'} md:block
+            fixed md:relative w-[205.5px] h-[calc(100vh-45px)] bg-[#011627] border-r border-[#1E2D3D] 
+            z-50 overflow-y-auto
           `}
         >
           <SideMenu openTab={openTab} activeTab={activeTab} />
         </div>
 
         {/* Content container */}
-        <div className="flex-1 h-[calc(100vh-45px)] overflow-hidden">
+        <div className="flex-1 h-[calc(100vh-45px)] w-full min-w-[300px]">
           {/* Mobile content */}
-          <div className="md:hidden w-full h-full overflow-y-auto">
+          <div className="md:hidden w-full h-full min-w-[300px] overflow-y-auto">
             <ContentArea activeTab={activeTab} />
           </div>
 
           {/* Desktop content */}
           <div className="hidden md:flex flex-1">
-            <div className="w-[55%] h-[74vh]">
+            <div className="w-full lg:w-[65%] h-[74vh]">
               <ContentArea activeTab={activeTab} />
             </div>
-            <div className="w-[45%] border-l border-[#1E2D3D] h-[74vh]">
+            <div className="hidden lg:block w-[35%] border-l border-[#1E2D3D] h-[74vh] min-w-[250px]">
               <AboutTerminal />
             </div>
           </div>

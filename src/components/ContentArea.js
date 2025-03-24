@@ -111,12 +111,10 @@ const ContentArea = ({ activeTab }) => {
   };
 
   return (
-    <div className="h-full bg-[#011627] text-[#607B96]">
-      <div className="h-full overflow-y-auto">
-        <div className="p-4 md:p-8">
-          <div className="code-block font-mono pl-4">
-            {renderCodeLines(getContentLines())}
-          </div>
+    <div className="h-full bg-[#011627] text-[#607B96] overflow-y-auto">
+      <div className="p-4 md:p-6">
+        <div className="code-block font-mono">
+          {renderCodeLines(getContentLines())}
         </div>
       </div>
     </div>
