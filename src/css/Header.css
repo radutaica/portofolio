@@ -8,8 +8,13 @@
     align-items: center;
     height: 100%;
     padding: 0 30.75px;
-    border-right: 1px solid #1E2D3D;
     cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .tab {
+      border-right: 1px solid #1E2D3D;
+    }
   }
   
   .tab-label {
@@ -49,8 +54,10 @@
   }
   
   /* Ensure the last tab has a right border */
-  .tab:last-child {
-    border-right: 1px solid #1E2D3D;
-    height: 100%;
+  @media (min-width: 768px) {
+    .tab:last-child {
+      border-right: 1px solid #1E2D3D;
+      height: 100%;
+    }
   }
   

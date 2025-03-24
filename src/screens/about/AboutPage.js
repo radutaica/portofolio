@@ -39,15 +39,9 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="flex flex-col h-[100vh] md:h-[73vh] h-screen bg-[#011627] text-[#607B96]">
+    <div className="flex flex-col h-[87vh] md:h-[73vh] bg-[#011627] text-[#607B96]">
       {/* Header */}
       <div className="flex items-center border-b border-[#1E2D3D] h-[45px] px-4 md:px-0">
-        <button 
-          className="md:hidden text-[#607B96] hover:text-white mr-4"
-          onClick={toggleMobileMenu}
-        >
-          <FaBars className="w-6 h-6" />
-        </button>
         <Header 
           openedTabs={openedTabs} 
           closeTab={closeTab} 
@@ -58,30 +52,21 @@ const AboutPage = () => {
 
       {/* Main container */}
       <div className="flex flex-1 relative">
-        {/* Mobile menu overlay */}
-        {isMobileMenuOpen && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-            onClick={toggleMobileMenu}
-          />
-        )}
-        
-        {/* Sidebar */}
-        <div 
-          className={`
-            ${isMobileMenuOpen ? 'block' : 'hidden'} md:block
-            fixed md:relative w-[205.5px] h-[calc(100vh-45px)] md:h-[calc(73vh-45px)] bg-[#011627] border-r border-[#1E2D3D] 
-            z-50 overflow-y-auto
-          `}
-        >
+        {/* Sidebar - only visible on desktop */}
+        <div className="hidden md:block w-[205.5px] h-[calc(73vh-45px)] bg-[#011627] border-r border-[#1E2D3D] overflow-y-auto">
           <SideMenu openTab={openTab} activeTab={activeTab} />
         </div>
 
         {/* Content container */}
-        <div className="flex-1 h-[calc(100vh-45px)] md:h-[calc(73vh-45px)] w-full min-w-[300px]">
-          {/* Mobile content */}
-          <div className="md:hidden w-full h-full min-w-[300px] overflow-y-auto">
-            <ContentArea activeTab={activeTab} />
+        <div className="flex-1 h-[calc(87vh-45px)] md:h-[calc(73vh-45px)] w-full min-w-[300px]">
+          {/* Mobile layout */}
+          <div className="md:hidden w-full h-full flex flex-col">
+            <div className="border-b border-[#1E2D3D]">
+              <SideMenu openTab={openTab} activeTab={activeTab} />
+            </div>
+            <div className="flex-1 overflow-y-auto">
+              <ContentArea activeTab={activeTab} />
+            </div>
           </div>
 
           {/* Desktop content */}
