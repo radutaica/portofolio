@@ -67,7 +67,7 @@ const ContactPage = () => {
     <div className="h-[73.5vh] bg-[#011627] text-white">
       <div className="flex h-full">
         {/* Left sidebar */}
-        <div className="w-[250px] border-r border-[#1E2D3D]">
+        <div className="w-[205px] border-r border-[#1E2D3D]">
           <div className="flex items-center h-[45px] px-4 border-b border-[#1E2D3D]">
             <span className="text-[#607B96]">contacts</span>
           </div>

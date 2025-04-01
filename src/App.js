@@ -14,7 +14,7 @@ const App = () => {
   return (
     <Router>
       <div className="homepage">
-        <div className="main-body">
+        <div className="flex flex-col h-full">
           {/* Show desktop navbar on larger screens */}
           <div className="hidden md:block">
             <Navbar />  {/* Always present */}
@@ -45,7 +45,8 @@ const App = () => {
             </div>
           </div>
 
-          <div className="page-content">
+          {/* Main content area - flex-1 to take remaining space */}
+          <div className="flex-1 min-h-0">
             <Routes>
               {/* Define routes for different pages */}
               <Route path="/" element={<HomePage />} />
@@ -55,6 +56,7 @@ const App = () => {
             </Routes>
           </div>
           
+          {/* Footer - will always be at the bottom */}
           <Footer className="hidden md:block" />
         </div>
       </div>

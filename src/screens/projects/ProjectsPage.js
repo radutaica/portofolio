@@ -83,7 +83,7 @@ const ProjectsPage = () => {
   ];
 
   return (
-    <div className="flex flex-col h-full bg-[#011627] text-white">
+    <div className="flex flex-col h-[74vh] bg-[#011627] text-white">
       <div className="flex h-full">
         {/* Left sidebar with projects */}
         <div className="w-[205px] border-r border-[#1E2D3D]">
