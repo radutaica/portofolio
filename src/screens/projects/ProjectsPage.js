@@ -88,7 +88,7 @@ const ProjectsPage = () => {
         {/* Left sidebar with projects */}
         <div className="w-[205px] border-r border-[#1E2D3D]">
           <div className="flex items-center h-[45px] border-b border-[#1E2D3D]">
-            <div className="tab first-tab w-full">
+            <div className="w-full p-4">
               <span className="tab-label text-sm md:text-base font-bold">
                 projects
               </span>
