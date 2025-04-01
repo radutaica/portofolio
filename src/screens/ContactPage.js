@@ -64,7 +64,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="h-[73.5vh] bg-[#011627] text-white">
+    <div className="h-full bg-[#011627] text-white">
       <div className="flex h-full">
         {/* Left sidebar */}
         <div className="w-[205px] border-r border-[#1E2D3D]">
@@ -77,9 +77,9 @@ const ContactPage = () => {
                 <span className="mt-1">📧</span>
                 <div>
                   <a href="mailto:radu.andrei.taica@gmail.com" className="hover:text-white whitespace-normal">
-                    radu.andrei.taica@
+                    radu.andrei.
                     <br />
-                    gmail.com
+                    taica@gmail.com
                   </a>
                 </div>
               </div>
