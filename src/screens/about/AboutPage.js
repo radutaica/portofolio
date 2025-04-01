@@ -39,7 +39,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="flex flex-col h-[87vh] md:h-[73vh] bg-[#011627] text-[#607B96]">
+    <div className="flex flex-col h-full bg-[#011627] text-[#607B96]">
       {/* Header */}
       <div className="flex items-center border-b border-[#1E2D3D] h-[45px] px-4 md:px-0">
         <Header 
@@ -51,14 +51,14 @@ const AboutPage = () => {
       </div>
 
       {/* Main container */}
-      <div className="flex flex-1 relative">
+      <div className="flex flex-1 relative min-h-0">
         {/* Sidebar - only visible on desktop */}
-        <div className="hidden md:block w-[205.5px] h-[calc(73vh-45px)] bg-[#011627] border-r border-[#1E2D3D] overflow-y-auto">
+        <div className="hidden md:block w-[205px] h-full bg-[#011627] border-r border-[#1E2D3D]">
           <SideMenu openTab={openTab} activeTab={activeTab} />
         </div>
 
         {/* Content container */}
-        <div className="flex-1 h-[calc(87vh-45px)] md:h-[calc(73vh-45px)] w-full min-w-[300px]">
+        <div className="flex-1 h-full w-full min-w-[300px] min-h-0">
           {/* Mobile layout */}
           <div className="md:hidden w-full h-full flex flex-col">
             <div className="border-b border-[#1E2D3D]">
@@ -70,11 +70,11 @@ const AboutPage = () => {
           </div>
 
           {/* Desktop content */}
-          <div className="hidden md:flex flex-1">
-            <div className="w-full lg:w-[65%] h-[calc(73vh-45px)]">
+          <div className="hidden md:flex h-full">
+            <div className="w-full lg:w-[65%] h-full overflow-y-auto">
               <ContentArea activeTab={activeTab} />
             </div>
-            <div className="hidden lg:block w-[35%] border-l border-[#1E2D3D] h-[calc(73vh-45px)] min-w-[250px]">
+            <div className="hidden lg:block w-[35%] border-l border-[#1E2D3D] h-full min-w-[250px]">
               <AboutTerminal />
             </div>
           </div>

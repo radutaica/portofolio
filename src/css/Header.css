@@ -51,6 +51,9 @@
   /* Ensure the first tab has no left border */
   .tab:first-child {
     border-left: none;
+    padding: 0 46px 0 15px;
+    height: 100%;
+    border-right: 1px solid #1E2D3D;
   }
   
   /* Ensure the last tab has a right border */

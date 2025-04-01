@@ -83,12 +83,16 @@ const ProjectsPage = () => {
   ];
 
   return (
-    <div className="h-[73.5vh] bg-[#011627] text-white">
+    <div className="flex flex-col h-full bg-[#011627] text-white">
       <div className="flex h-full">
-        {/* Left sidebar with projects text and technologies */}
+        {/* Left sidebar with projects */}
         <div className="w-[205px] border-r border-[#1E2D3D]">
-          <div className="flex items-center h-[45px] px-4 border-b border-[#1E2D3D]">
-            <span className="text-[#607B96]">projects</span>
+          <div className="flex items-center h-[45px] border-b border-[#1E2D3D]">
+            <div className="tab first-tab w-full">
+              <span className="tab-label text-sm md:text-base font-bold">
+                projects
+              </span>
+            </div>
           </div>
           <div className="p-4">
             <div className="space-y-2">
@@ -115,25 +119,23 @@ const ProjectsPage = () => {
         </div>
 
         {/* Main content area */}
-        <div className="flex-1 flex flex-col">
-          {/* Header with selected techs */}
-          <div className="h-[45px] border-b border-[#1E2D3D] flex items-center px-4">
-            <div className="flex items-center flex-wrap">
-              {selectedTechs.map((tech, index) => (
-                <div key={tech} className="flex items-center h-full">
-                  <div className="flex items-center gap-2 px-4 text-sm">
-                    <span className="text-[#607B96]">{tech}</span>
-                    <button 
-                      onClick={() => removeTech(tech)}
-                      className="text-[#607B96] hover:text-white focus:outline-none"
-                    >
-                      ×
-                    </button>
-                  </div>
-                  <div className="h-full w-[1px] bg-[#1E2D3D]"></div>
-                </div>
-              ))}
-            </div>
+        <div className="flex-1 flex flex-col min-h-0">
+          {/* Header */}
+          <div className="header-tabs h-[45px] border-b border-[#1E2D3D]">
+            {selectedTechs.map((tech) => (
+              <div key={tech} className="tab hidden md:flex">
+                <span>{tech}</span>
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    removeTech(tech);
+                  }}
+                  className="ml-2"
+                >
+                  x
+                </button>
+              </div>
+            ))}
           </div>
 
           {/* Project cards */}
