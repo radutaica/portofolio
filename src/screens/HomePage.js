@@ -96,13 +96,11 @@ useEffect(() => {
       </div>
 
       <div className='right md:block hidden'>
-        <div className="carousel">
-          {images.map((image, index) => (
-            <div key={index} className={getClassName(index)}>
-              <img src={image} alt={`Carousel ${index}`} />
-            </div>
-          ))}
-        </div>
+          <img 
+            src="/images/illustration.png" 
+            alt="Illustration" 
+            className="w-[700px] h-[700px] object-contain"
+          />
       </div>
     </div>
   );
