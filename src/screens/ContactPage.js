@@ -247,25 +247,6 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <div className="h-[50px] border-t border-[#1E2D3D] flex items-center justify-between px-4">
-        <div className="flex items-center gap-2 text-[#607B96]">
-          <span>find me in:</span>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-white">
-              <FaTwitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="hover:text-white">
-              <FaLinkedin className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-        <a href="#" className="text-[#607B96] hover:text-white flex items-center gap-2">
-          <span>@username</span>
-          <FaGithub className="w-5 h-5" />
-        </a>
-      </div>
     </div>
   );
 };

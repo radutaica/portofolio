@@ -84,7 +84,7 @@ const ProjectsPage = () => {
   ];
 
   return (
-    <div className="flex flex-col h-[74vh] bg-[#011627] text-white">
+    <div className="flex flex-col h-full bg-[#011627] text-white">
       <div className="flex flex-col md:flex-row h-full">
         {/* Technologies sidebar - becomes top menu on mobile */}
         <div className="w-full md:w-[205px] border-b md:border-b-0 md:border-r border-[#1E2D3D]">

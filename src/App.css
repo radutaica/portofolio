@@ -141,7 +141,7 @@ body {
   }
 
   .homepage {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0;
     border-radius: 0;
