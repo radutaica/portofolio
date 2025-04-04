@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin, FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
@@ -10,6 +10,8 @@ const ContactPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+  const [isContactsOpen, setIsContactsOpen] = useState(false);
+  const [isSocialOpen, setIsSocialOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,13 +67,22 @@ const ContactPage = () => {
 
   return (
     <div className="h-full bg-[#011627] text-white">
-      <div className="flex h-full">
-        {/* Left sidebar */}
-        <div className="w-[205px] border-r border-[#1E2D3D]">
-          <div className="flex items-center h-[45px] px-4 border-b border-[#1E2D3D]">
-            <span className="text-[#607B96]">contacts</span>
+      <div className="flex flex-col md:flex-row h-full">
+        {/* Left sidebar - becomes top menu on mobile */}
+        <div className="w-full md:w-[205px] md:border-r border-[#1E2D3D]">
+          {/* Contacts dropdown */}
+          <div 
+            className="flex items-center h-[45px] border-b border-[#1E2D3D] cursor-pointer"
+            onClick={() => setIsContactsOpen(!isContactsOpen)}
+          >
+            <div className="w-full px-4 flex items-center justify-between">
+              <span className="text-[#607B96]">contacts</span>
+              <span className="md:hidden">
+                {isContactsOpen ? <FaChevronDown /> : <FaChevronRight />}
+              </span>
+            </div>
           </div>
-          <div className="p-4">
+          <div className={`${isContactsOpen ? 'block' : 'hidden'} md:block p-4 border-b md:border-b-0 border-[#1E2D3D]`}>
             <div className="mb-4">
               <div className="flex items-start gap-2 text-[#607B96] mb-2">
                 <span className="mt-1">📧</span>
@@ -88,26 +99,38 @@ const ContactPage = () => {
                 <a href="tel:+40736012875" className="hover:text-white">+40736012875</a>
               </div>
             </div>
-            <div>
-              <div className="text-[#607B96] mb-2">find-me-also-in:</div>
-              <div className="space-y-2">
-                <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                  <span>▶</span>
-                  <span>YouTube</span>
-                </a>
-                <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                  <span>▶</span>
-                  <span>dev.to</span>
-                </a>
-                <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                  <span>▶</span>
-                  <span>Instagram</span>
-                </a>
-                <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                  <span>▶</span>
-                  <span>Twitch</span>
-                </a>
-              </div>
+          </div>
+
+          {/* Find me also in dropdown */}
+          <div 
+            className="flex items-center h-[45px] border-b border-[#1E2D3D] cursor-pointer"
+            onClick={() => setIsSocialOpen(!isSocialOpen)}
+          >
+            <div className="w-full px-4 flex items-center justify-between">
+              <span className="text-[#607B96]">find-me-also-in</span>
+              <span className="md:hidden">
+                {isSocialOpen ? <FaChevronDown /> : <FaChevronRight />}
+              </span>
+            </div>
+          </div>
+          <div className={`${isSocialOpen ? 'block' : 'hidden'} md:block p-4`}>
+            <div className="space-y-2">
+              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
+                <span>▶</span>
+                <span>YouTube</span>
+              </a>
+              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
+                <span>▶</span>
+                <span>dev.to</span>
+              </a>
+              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
+                <span>▶</span>
+                <span>Instagram</span>
+              </a>
+              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
+                <span>▶</span>
+                <span>Twitch</span>
+              </a>
             </div>
           </div>
         </div>
@@ -117,9 +140,9 @@ const ContactPage = () => {
           <div className="h-[45px] border-b border-[#1E2D3D] flex items-center px-4">
           </div>
 
-          <div className="flex-1 flex">
+          <div className="flex-1 flex flex-col lg:flex-row">
             {/* Contact form */}
-            <div className="flex-1 p-8 border-r border-[#1E2D3D]">
+            <div className="flex-1 p-8 lg:border-r border-[#1E2D3D]">
               <form onSubmit={handleSubmit} className="max-w-xl">
                 <div className="mb-6">
                   <label className="block text-[#607B96] mb-2">_name:</label>
@@ -174,8 +197,8 @@ const ContactPage = () => {
               </form>
             </div>
 
-            {/* Code snippet */}
-            <div className="flex-1 p-8 bg-[#011221] font-mono">
+            {/* Code snippet - hidden on mobile */}
+            <div className="hidden lg:block flex-1 p-8 bg-[#011221] font-mono">
               <div className="text-[#607B96]">
                 <div className="mb-4">
                   <span className="text-[#C98BDF]">const</span>{" "}
