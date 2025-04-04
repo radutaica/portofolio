@@ -19,17 +19,21 @@ const ContactPage = () => {
     setSubmitStatus({ type: '', message: '' });
 
     try {
-      // Replace these with your actual EmailJS credentials
+      // Replace these with your EmailJS credentials:
+      // 1. Go to https://www.emailjs.com/
+      // 2. Create an account and get your Public Key
+      // 3. Create an Email Service (like Gmail) and get the Service ID
+      // 4. Create an Email Template and get the Template ID
       const result = await emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_aau4b99', // Replace with your Email Service ID
+        'template_lzc8v4v', // Replace with your Email Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           date: getCurrentDate(),
         },
-        'YOUR_PUBLIC_KEY'
+        'GH4WK6HQ53E93OloR' // Replace with your EmailJS Public Key
       );
 
       if (result.status === 200) {
