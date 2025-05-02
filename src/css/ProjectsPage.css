@@ -1,0 +1,27 @@
+.projects-page-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #010C15;
+}
+
+.header {
+  height: 60px;
+  border-bottom: 1px solid #1E2D3D;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.side-menu {
+  width: 300px;
+  border-right: 1px solid #1E2D3D;
+}
+
+.main-content {
+  flex: 1;
+  overflow: auto;
+} 

@@ -1,0 +1,66 @@
+.header-tabs {
+    display: flex;
+    height: 100%;
+  }
+  
+  .tab {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30.75px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .tab {
+      border-right: 1px solid #1E2D3D;
+    }
+  }
+  
+  .tab-label {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .tab-label::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    margin-right: 8px;
+  }
+  
+  .tab.active {
+    color: white;
+    border-bottom: 2px solid #FEA55F;
+  }
+  
+  .tab button {
+    margin-left: 8px;
+  }
+  
+  .tab button:hover {
+    color: white;
+  }
+  
+  /* Ensure the first tab has no left border */
+  .tab:first-child {
+    border-left: none;
+    padding: 0 46px 0 15px;
+    height: 100%;
+    border-right: 1px solid #1E2D3D;
+  }
+  
+  /* Ensure the last tab has a right border */
+  @media (min-width: 768px) {
+    .tab:last-child {
+      border-right: 1px solid #1E2D3D;
+      height: 100%;
+    }
+  }
+  

@@ -1,0 +1,30 @@
+.sidebar {
+  background-color: transparent;
+  padding: 0;
+  min-height: 100%;
+}
+
+.folder p {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.folder ul {
+  list-style-type: none;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.folder ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.arrow-icon, .folder-icon, .file-icon {
+  margin-right: 8px;
+}

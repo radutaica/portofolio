@@ -1,20 +1,20 @@
 .navbar {
     display: flex;
-    justify-content: space-between; /* Spread items across the navbar */
+    justify-content: space-between;
     align-items: center;
     background-color: #011627;
     width: 100%;
     position: relative;
     z-index: 1000;
-    border-bottom: 2px solid #1E2D3D; /* Full-width bottom border for navbar */
-    height: 60px; /* Set a fixed height for the navbar */
+    border-bottom: 2px solid #1E2D3D;
+    height: 60px; 
   }
   
   .navbar-logo a {
     color: #607B96;  /* Default color for the logo */
     text-decoration: none;
-    font-size: 18px;
-    padding-right: 20px;  /* Add some spacing between the logo and the links */
+    font-size: 16px;
+    padding-left: 30px;  /* Add some spacing between the logo and the links */
   }
   
   .navbar-links {
@@ -31,8 +31,8 @@
   .navbar-links li a {
     color: #607B96;  /* Default color for inactive tabs */
     text-decoration: none;
-    font-size: 18px;
-    padding: 16px;  /* Adjust padding for balanced height */
+    font-size: 16px;
+    padding: 25px;  /* Adjust padding for balanced height */
     position: relative;
     border-left: 1px solid #1E2D3D;  /* Left border on all links */
     height: 100%;  /* Ensure the anchor element fills the navbar height */
@@ -45,6 +45,13 @@
   .navbar-links li:last-child a {
     border-right: 1px solid #1E2D3D; /* Right border only for the last link */
   }
+
+  .navbar-links a:hover {
+    background-color: #333;
+    border-radius: 4px;
+    color: #43D9AD;
+    transition: background-color 0.3s ease;
+  }
   
   .navbar-links li a.active::after {
     content: "";
@@ -52,13 +59,8 @@
     left: 0;
     right: 0;
     bottom: 0;  /* Position the border at the bottom of the link */
-    height: 2px;
+    height: 3px;
     background-color: #FEA55F;  /* The colored bottom border under active link */
-  }
-  
-  /* Active state for font color */
-  .navbar-links li a.active {
-    color: #FFFFFF; /* Active tab font color */
   }
   
   /* Contact Me section on the right */
@@ -93,13 +95,33 @@
     background-color: #FEA55F;  /* The colored bottom border under the active Contact Me link */
   }
   
-  .navbar-contact a.active {
-    color: #FFFFFF;  /* Active tab font color for Contact Me */
-  }
-  
   .navbar-contact a:hover {
     background-color: #333;
     border-radius: 4px;
+    color: #43D9AD;
     transition: background-color 0.3s ease;
+  }
+  .blinking-caret {
+    font-family: monospace; /* Monospaced font for a coding look */
+    font-size: 24px;
+    color: #43D9AD;
+    text-decoration: none;
+    position: relative; 
+  }
+
+  /* Simulated caret using ::after pseudo-element */
+  .blinking-caret::after {
+    content: ''; /* No actual content, just the caret */
+    position: absolute;
+    right: -7px; /* Positioning the caret slightly to the right of the text */
+    width: 4px; /* Width of the caret (blinking line) */
+    height: 100%;
+    background-color: #43D9AD; /* Same color as your text */
+    animation: blink-animation 1s steps(1) infinite;
+  }
+  @keyframes blink-animation {
+    50% {
+      opacity: 0;
+    }
   }
   
