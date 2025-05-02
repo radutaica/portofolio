@@ -4,7 +4,7 @@ import { SiGatsby, SiFlutter, SiRuby, SiRubyonrails } from 'react-icons/si';
 import ProjectCard from '../../components/ProjectCard';
 
 const ProjectsPage = () => {
-  const [selectedTechs, setSelectedTechs] = useState(['React']);
+  const [selectedTechs, setSelectedTechs] = useState([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const technologies = [
