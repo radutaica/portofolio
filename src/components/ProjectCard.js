@@ -4,7 +4,7 @@ const ProjectCard = ({ title, subtitle, description, image, techIcons }) => {
   return (
     <div className="bg-[#011221] rounded-lg overflow-hidden mb-4 border border-[#1E2D3D] max-w-[450px]">
       <div className="relative">
-        <img src={image} alt={title} className="w-full h-40 object-cover" />
+        <img src={image} alt={title} className="w-full h-56 object-cover" />
         <div className="absolute top-2 right-2 bg-[#011221] p-2 rounded-lg flex gap-2">
           {techIcons.map((icon, index) => (
             <div key={index} className="w-6 h-6">

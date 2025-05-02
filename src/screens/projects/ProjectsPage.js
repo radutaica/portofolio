@@ -36,28 +36,28 @@ const ProjectsPage = () => {
       title: 'Mind Pace',
       subtitle: '_focus-timer',
       description: 'A simple and visually engaging focus timer that helps you stay productive. Built with TypeScript to provide a clean and efficient user experience.',
-      image: '/images/mind-pace.jpg',
+      image: '/images/mind-pace-logo.png',
       tech: ['TypeScript', 'React', 'HTML', 'CSS']
     },
     {
       title: 'Restaurant Pay',
       subtitle: '_qr-payment',
       description: 'Streamline restaurant payments with a quick QR code scan! This project allows customers to view their bill and pay directly from their mobile devices, making the dining experience faster and more convenient.',
-      image: '/images/restaurant-pay.jpg',
+      image: '/images/restaurant-pay.png',
       tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Node.js']
     },
     {
       title: 'StonksBot',
       subtitle: '_trading-bot',
       description: 'A Python-based trading bot that helps automate and optimize trading strategies.',
-      image: '/images/stonksbot.jpg',
+      image: '/images/stonks-bot.png',
       tech: ['Python']
     },
     {
       title: 'Portfolio',
       subtitle: '_personal-website',
       description: 'My personal portfolio website showcasing my projects and skills. Built with modern web technologies.',
-      image: '/images/portfolio.jpg',
+      image: '/images/portofolio.png',
       tech: ['React', 'JavaScript', 'HTML', 'CSS']
     }
   ];
