@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectCard = ({ title, subtitle, description, image, techIcons }) => {
+const ProjectCard = ({ title, subtitle, description, image, techIcons, githubUrl }) => {
   return (
     <div className="bg-[#011221] rounded-lg overflow-hidden mb-4 border border-[#1E2D3D] max-w-[450px]">
       <div className="relative">
@@ -19,9 +19,14 @@ const ProjectCard = ({ title, subtitle, description, image, techIcons }) => {
           <span className="text-[#607B96] text-sm"> // {subtitle}</span>
         </div>
         <p className="text-[#607B96] text-sm mb-3 line-clamp-2">{description}</p>
-        <button className="bg-[#1C2B3A] text-[#FFFFFF] px-3 py-1.5 text-sm rounded hover:bg-[#263B4D] transition-colors">
+        <a 
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[#1C2B3A] text-[#FFFFFF] px-3 py-1.5 text-sm rounded hover:bg-[#263B4D] transition-colors"
+        >
           view-project
-        </button>
+        </a>
       </div>
     </div>
   );

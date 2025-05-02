@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FaReact, FaHtml5, FaCss3Alt, FaVuejs, FaAngular, FaGithub, FaChevronDown, FaChevronRight, FaPython, FaJs, FaNodeJs } from 'react-icons/fa';
-import { SiGatsby, SiFlutter } from 'react-icons/si';
+import { FaReact, FaGithub, FaChevronDown, FaChevronRight, FaPython, FaJs, FaNodeJs } from 'react-icons/fa';
+import { SiGatsby, SiFlutter, SiRuby, SiRubyonrails } from 'react-icons/si';
 import ProjectCard from '../../components/ProjectCard';
 
 const ProjectsPage = () => {
@@ -11,10 +11,10 @@ const ProjectsPage = () => {
     { name: 'TypeScript', icon: <FaReact className="w-6 h-6 text-[#3178C6]" /> },
     { name: 'React', icon: <FaReact className="w-6 h-6 text-[#61DAFB]" /> },
     { name: 'Python', icon: <FaPython className="w-6 h-6 text-[#3776AB]" /> },
-    { name: 'HTML', icon: <FaHtml5 className="w-6 h-6 text-[#E34F26]" /> },
-    { name: 'CSS', icon: <FaCss3Alt className="w-6 h-6 text-[#1572B6]" /> },
     { name: 'JavaScript', icon: <FaJs className="w-6 h-6 text-[#F7DF1E]" /> },
-    { name: 'Node.js', icon: <FaNodeJs className="w-6 h-6 text-[#339933]" /> }
+    { name: 'Node.js', icon: <FaNodeJs className="w-6 h-6 text-[#339933]" /> },
+    { name: 'Ruby', icon: <SiRuby className="w-6 h-6 text-[#CC342D]" /> },
+    { name: 'Rails', icon: <SiRubyonrails className="w-6 h-6 text-[#CC0000]" /> }
   ];
 
   const toggleTech = (techName) => {
@@ -37,28 +37,40 @@ const ProjectsPage = () => {
       subtitle: '_focus-timer',
       description: 'A simple and visually engaging focus timer that helps you stay productive. Built with TypeScript to provide a clean and efficient user experience.',
       image: '/images/mind-pace-logo.png',
-      tech: ['TypeScript', 'React', 'HTML', 'CSS']
+      tech: ['TypeScript', 'React'],
+      githubUrl: 'https://github.com/radutaica/mind-pace'
     },
     {
       title: 'Restaurant Pay',
-      subtitle: '_qr-payment',
-      description: 'Streamline restaurant payments with a quick QR code scan! This project allows customers to view their bill and pay directly from their mobile devices, making the dining experience faster and more convenient.',
+      subtitle: '_frontend',
+      description: 'The frontend of a restaurant payment system built with React. Features a modern UI for customers to view their bill and make payments through QR codes.',
       image: '/images/restaurant-pay.png',
-      tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Node.js']
+      tech: ['React', 'JavaScript'],
+      githubUrl: 'https://github.com/radutaica/restaurant-pay-react'
+    },
+    {
+      title: 'Restaurant Pay',
+      subtitle: '_backend',
+      description: 'The backend API for the restaurant payment system built with Ruby on Rails. Handles payment processing, order management, and restaurant data.',
+      image: '/images/restaurant-pay.png',
+      tech: ['Ruby', 'Rails', 'Node.js'],
+      githubUrl: 'https://github.com/radutaica/restaurant-pay-rails'
     },
     {
       title: 'StonksBot',
       subtitle: '_trading-bot',
       description: 'A Python-based trading bot that helps automate and optimize trading strategies.',
       image: '/images/stonks-bot.png',
-      tech: ['Python']
+      tech: ['Python'],
+      githubUrl: 'https://github.com/radutaica/stonksbot'
     },
     {
       title: 'Portfolio',
       subtitle: '_personal-website',
       description: 'My personal portfolio website showcasing my projects and skills. Built with modern web technologies.',
       image: '/images/portofolio.png',
-      tech: ['React', 'JavaScript', 'HTML', 'CSS']
+      tech: ['React', 'JavaScript'],
+      githubUrl: 'https://github.com/radutaica/portofolio'
     }
   ];
 
@@ -91,13 +103,12 @@ const ProjectsPage = () => {
                   className={`flex items-center space-x-2 p-2 cursor-pointer ${
                     selectedTechs.includes(tech.name) ? 'bg-[#1E2D3D]' : ''
                   }`}
-                  onClick={() => toggleTech(tech.name)}
                 >
                   <input
                     type="checkbox"
                     checked={selectedTechs.includes(tech.name)}
                     onChange={() => toggleTech(tech.name)}
-                    className="border-[#607B96]"
+                    className="border-[#607B96] cursor-pointer"
                   />
                   {tech.icon}
                   <span className="text-[#607B96]">{tech.name}</span>
