@@ -17,7 +17,7 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: '', message: '' });
-
+    console.log(import.meta.env);
     try {
       const result = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
