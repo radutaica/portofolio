@@ -114,21 +114,17 @@ const ContactPage = () => {
           </div>
           <div className={`${isSocialOpen ? 'block' : 'hidden'} md:block p-4`}>
             <div className="space-y-2">
-              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                <span>▶</span>
-                <span>YouTube</span>
-              </a>
-              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                <span>▶</span>
-                <span>dev.to</span>
-              </a>
-              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
+              <a href="https://www.instagram.com/radutaica" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white">
                 <span>▶</span>
                 <span>Instagram</span>
               </a>
-              <a href="#" className="flex items-center gap-2 text-[#607B96] hover:text-white">
+              <a href="https://steamcommunity.com/profiles/76561198041583922/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white">
                 <span>▶</span>
-                <span>Twitch</span>
+                <span>Steam</span>
+              </a>
+              <a href="https://discord.com/users/172601259864489984" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white">
+                <span>▶</span>
+                <span>Discord</span>
               </a>
             </div>
           </div>
