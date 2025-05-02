@@ -20,15 +20,15 @@ const ContactPage = () => {
 
     try {
       const result = await emailjs.send(
-        'service_aau4b99',
-        'template_lzc8v4v',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           date: getCurrentDate(),
         },
-        'GH4WK6HQ53E93OloR'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       if (result.status === 200) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaReact, FaHtml5, FaCss3Alt, FaVuejs, FaAngular, FaGithub, FaChevronDown, FaChevronRight } from 'react-icons/fa';
+import { FaReact, FaHtml5, FaCss3Alt, FaVuejs, FaAngular, FaGithub, FaChevronDown, FaChevronRight, FaPython, FaJs, FaNodeJs } from 'react-icons/fa';
 import { SiGatsby, SiFlutter } from 'react-icons/si';
 import ProjectCard from '../../components/ProjectCard';
 
@@ -8,13 +8,13 @@ const ProjectsPage = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const technologies = [
+    { name: 'TypeScript', icon: <FaReact className="w-6 h-6 text-[#3178C6]" /> },
     { name: 'React', icon: <FaReact className="w-6 h-6 text-[#61DAFB]" /> },
+    { name: 'Python', icon: <FaPython className="w-6 h-6 text-[#3776AB]" /> },
     { name: 'HTML', icon: <FaHtml5 className="w-6 h-6 text-[#E34F26]" /> },
     { name: 'CSS', icon: <FaCss3Alt className="w-6 h-6 text-[#1572B6]" /> },
-    { name: 'Vue', icon: <FaVuejs className="w-6 h-6 text-[#4FC08D]" /> },
-    { name: 'Angular', icon: <FaAngular className="w-6 h-6 text-[#DD0031]" /> },
-    { name: 'Gatsby', icon: <SiGatsby className="w-6 h-6 text-[#663399]" /> },
-    { name: 'Flutter', icon: <SiFlutter className="w-6 h-6 text-[#02569B]" /> },
+    { name: 'JavaScript', icon: <FaJs className="w-6 h-6 text-[#F7DF1E]" /> },
+    { name: 'Node.js', icon: <FaNodeJs className="w-6 h-6 text-[#339933]" /> }
   ];
 
   const toggleTech = (techName) => {
@@ -33,53 +33,32 @@ const ProjectsPage = () => {
 
   const projects = [
     {
-      title: 'Project 1',
-      subtitle: '_ui-animations',
-      description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/images/project_image.jpg',
-      tech: 'React'
+      title: 'Mind Pace',
+      subtitle: '_focus-timer',
+      description: 'A simple and visually engaging focus timer that helps you stay productive. Built with TypeScript to provide a clean and efficient user experience.',
+      image: '/images/mind-pace.jpg',
+      tech: ['TypeScript', 'React', 'HTML', 'CSS']
     },
     {
-      title: 'Project 2',
-      subtitle: '_tetris-game',
-      description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/images/project_image.jpg',
-      tech: 'React'
+      title: 'Restaurant Pay',
+      subtitle: '_qr-payment',
+      description: 'Streamline restaurant payments with a quick QR code scan! This project allows customers to view their bill and pay directly from their mobile devices, making the dining experience faster and more convenient.',
+      image: '/images/restaurant-pay.jpg',
+      tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Node.js']
     },
     {
-      title: 'Project 3',
-      subtitle: '_portofolio',
-      description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/images/project_image.jpg',
-      tech: 'React'
+      title: 'StonksBot',
+      subtitle: '_trading-bot',
+      description: 'A Python-based trading bot that helps automate and optimize trading strategies.',
+      image: '/images/stonksbot.jpg',
+      tech: ['Python']
     },
     {
-      title: 'Project 4',
-      subtitle: '_portofolio',
-      description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/images/project_image.jpg',
-      tech: 'React'
-    },
-    {
-      title: 'Project 5',
-      subtitle: '_portofolio',
-      description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/images/project_image.jpg',
-      tech: 'React'
-    },
-    {
-      title: 'Project 6',
-      subtitle: '_portofolio',
-      description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/images/project_image.jpg',
-      tech: 'React'
-    },
-    {
-      title: 'Project 7',
-      subtitle: '_portofolio',
-      description: 'Duis aute irure dolor in velit esse cillum dolore.',
-      image: '/images/project_image.jpg',
-      tech: 'React'
+      title: 'Portfolio',
+      subtitle: '_personal-website',
+      description: 'My personal portfolio website showcasing my projects and skills. Built with modern web technologies.',
+      image: '/images/portfolio.jpg',
+      tech: ['React', 'JavaScript', 'HTML', 'CSS']
     }
   ];
 
@@ -152,12 +131,20 @@ const ProjectsPage = () => {
           <div className="flex-1 p-4 md:p-8 overflow-y-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {projects
-                .filter(project => selectedTechs.length === 0 || selectedTechs.includes(project.tech))
+                .filter(project => {
+                  // If no technologies are selected, show all projects
+                  if (selectedTechs.length === 0) return true;
+                  
+                  // Show project if it uses ANY of the selected technologies
+                  return project.tech.some(tech => selectedTechs.includes(tech));
+                })
                 .map((project, index) => (
                   <ProjectCard
                     key={index}
                     {...project}
-                    techIcon={technologies.find(tech => tech.name === project.tech)?.icon}
+                    techIcons={project.tech.map(techName => 
+                      technologies.find(tech => tech.name === techName)?.icon
+                    )}
                   />
                 ))}
             </div>
