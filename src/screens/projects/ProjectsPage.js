@@ -131,13 +131,10 @@ const ProjectsPage = () => {
           <div className="flex-1 p-4 md:p-8 overflow-y-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {projects
-                .filter(project => {
-                  // If no technologies are selected, show all projects
-                  if (selectedTechs.length === 0) return true;
-                  
-                  // Show project if it uses ANY of the selected technologies
-                  return project.tech.some(tech => selectedTechs.includes(tech));
-                })
+                .filter(project => 
+                  selectedTechs.length === 0 || 
+                  selectedTechs.some(selectedTech => project.tech.includes(selectedTech))
+                )
                 .map((project, index) => (
                   <ProjectCard
                     key={index}
