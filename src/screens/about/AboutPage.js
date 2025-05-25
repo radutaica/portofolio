@@ -34,6 +34,12 @@ const AboutPage = () => {
     }
   };
 
+  // Close all tabs at once
+  const closeAllTabs = () => {
+    setOpenedTabs([]);
+    setActiveTab(null);
+  };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -54,7 +60,7 @@ const AboutPage = () => {
       <div className="flex flex-1 relative min-h-0">
         {/* Sidebar - only visible on desktop */}
         <div className="hidden md:block w-[205px] h-full bg-[#011627] border-r border-[#1E2D3D]">
-          <SideMenu openTab={openTab} activeTab={activeTab} />
+          <SideMenu openTab={openTab} activeTab={activeTab} closeTab={closeTab} closeAllTabs={closeAllTabs} openedTabs={openedTabs} />
         </div>
 
         {/* Content container */}
@@ -62,7 +68,7 @@ const AboutPage = () => {
           {/* Mobile layout */}
           <div className="md:hidden w-full h-full flex flex-col">
             <div className="border-b border-[#1E2D3D]">
-              <SideMenu openTab={openTab} activeTab={activeTab} />
+              <SideMenu openTab={openTab} activeTab={activeTab} closeTab={closeTab} closeAllTabs={closeAllTabs} openedTabs={openedTabs} />
             </div>
             <div className="flex-1 overflow-y-auto">
               <ContentArea activeTab={activeTab} />
