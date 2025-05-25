@@ -13,7 +13,7 @@ const SideMenu = ({ openTab, activeTab }) => {
   return (
     <div className="sidebar">
       <div className="folder">
-        <p onClick={toggleEducation} style = {{color: isEducationOpen ? 'white' : '#607B96'}}>
+        <p onClick={toggleEducation} style = {{color: 'white'}}>
         <FontAwesomeIcon
           icon={isEducationOpen ? faChevronDown : faChevronRight}
           className="arrow-icon"
@@ -34,7 +34,7 @@ const SideMenu = ({ openTab, activeTab }) => {
         )}
       </div>
       <div className="folder">
-        <p onClick={toggleWork} style = {{color: isWorkOpen ? 'white' : '#607B96'}}>
+        <p onClick={toggleWork} style = {{color: 'white'}}>
         <FontAwesomeIcon
           icon={isWorkOpen ? faChevronDown : faChevronRight}
           className="arrow-icon"
