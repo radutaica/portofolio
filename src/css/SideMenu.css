@@ -28,3 +28,43 @@
 .arrow-icon, .folder-icon, .file-icon {
   margin-right: 8px;
 }
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-item span {
+  flex-grow: 1;
+}
+
+.close-icon {
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+
+.close-icon:hover {
+  opacity: 1;
+  color: #ff6464;
+}
+
+/* Mobile tabs folder styles */
+.mobile-tabs-folder {
+  border-bottom: 1px solid #1E2D3D;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.close-all-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.close-all-btn:hover {
+  background-color: rgba(255, 100, 100, 0.1);
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaTwitter, FaLinkedin, FaChevronDown, FaChevronRight } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin, FaChevronDown, FaChevronRight, FaInstagram, FaSteam, FaDiscord } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
@@ -105,7 +105,7 @@ const ContactPage = () => {
             onClick={() => setIsSocialOpen(!isSocialOpen)}
           >
             <div className="w-full px-4 flex items-center justify-between">
-              <span className="text-[#607B96]">find-me-also-in</span>
+              <span className="text-[#607B96]">find-me-on</span>
               <span className="md:hidden">
                 {isSocialOpen ? <FaChevronDown /> : <FaChevronRight />}
               </span>
@@ -113,17 +113,17 @@ const ContactPage = () => {
           </div>
           <div className={`${isSocialOpen ? 'block' : 'hidden'} md:block p-4`}>
             <div className="space-y-2">
-              <a href="https://www.instagram.com/radutaica" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                <span>▶</span>
-                <span>Instagram</span>
+              <a href="https://www.instagram.com/radutaica" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white transition-colors duration-200 group">
+                <FaInstagram className="text-pink-500 group-hover:scale-110 transition-transform" />
+                <span className="border-b border-transparent group-hover:border-white">Instagram</span>
               </a>
-              <a href="https://steamcommunity.com/profiles/76561198041583922/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                <span>▶</span>
-                <span>Steam</span>
+              <a href="https://steamcommunity.com/profiles/76561198041583922/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white transition-colors duration-200 group">
+                <FaSteam className="text-blue-400 group-hover:scale-110 transition-transform" />
+                <span className="border-b border-transparent group-hover:border-white">Steam</span>
               </a>
-              <a href="https://discord.com/users/172601259864489984" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white">
-                <span>▶</span>
-                <span>Discord</span>
+              <a href="https://discord.com/users/172601259864489984" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#607B96] hover:text-white transition-colors duration-200 group">
+                <FaDiscord className="text-indigo-400 group-hover:scale-110 transition-transform" />
+                <span className="border-b border-transparent group-hover:border-white">Discord</span>
               </a>
             </div>
           </div>

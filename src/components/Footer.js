@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-bar">
             <div className="footer-section">
                 <div className="footer-item">
-                    <p className="text-[14px] sm:text-[16px]">find me in:</p>
+                    <p className="text-[14px] sm:text-[16px]">find me on:</p>
                 </div>
                 <div className="footer-item">
                     <a href="https://www.linkedin.com/in/radu-andrei-taica-708666201/" 
